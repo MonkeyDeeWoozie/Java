@@ -2,8 +2,112 @@ import java.util.*;
 
 public class Main
 {
+
     public static void main(String[] args)
     {
+        String boucle = "oui";
+
+        String prenom;
+        String nom;
+        int age;
+        String ville;
+        String afficherProfil;
+        String modifierProfil;
+        String redigerMessage;
+        // String message;
+        String affichage;
+        String aUnAmi;
+        // String nomAmi;
+        String afficherNomAmi;
+
+        int i_msg = 0;
+        int numeroMessage;
+        String[] messageTable = new String[10];
+
+        int i_ami = 0;
+        int numeroAmi;
+        String[] listeAmi = new String[10];
+
+        while(boucle.equals("oui"))
+        {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Ton prénom :");
+            prenom = sc.nextLine();
+            System.out.println("Ton nom :");
+            nom = sc.nextLine();
+            System.out.println("Ton age :");
+            age = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Ta ville :");
+            ville = sc.nextLine();
+
+            System.out.println("Tu veux afficher ton profil ?");
+            afficherProfil = sc.nextLine();
+            if ("oui".equals(afficherProfil))
+            {
+                System.out.println("Bonjour, " + prenom + " " + nom + " tu as " + age + " ans et tu habites à " + ville + " !");
+            }
+
+            System.out.println("Tu veux modifier ton profil ?");
+            modifierProfil = sc.nextLine();
+            if ("oui".equals(modifierProfil))
+            {
+                System.out.println("Ton prénom :");
+                prenom = sc.nextLine();
+                System.out.println("Ton nom :");
+                nom = sc.nextLine();
+                System.out.println("Ton age :");
+                age = sc.nextInt();
+                sc.nextLine();
+                System.out.println("Ta ville :");
+                ville = sc.nextLine();
+                System.out.println("Bonjour, " + prenom + " " + nom + " tu as " + age + " ans et tu habites à " + ville + " !");
+            }
+
+            System.out.println("Tu veux écrire un message ?");
+            redigerMessage = sc.nextLine();
+            if ("oui".equals(redigerMessage))
+            {
+                System.out.println("Saisie ton message !");
+                messageTable[i_msg] = sc.nextLine();
+                i_msg++;
+                i_msg = i_msg%10;
+                System.out.println("Tu veux afficher ton message ?");
+                affichage = sc.nextLine();
+                if("oui".equals(affichage))
+                {
+                    System.out.println("Quel numero de message ?");
+                    numeroMessage = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Ton message est : " + messageTable[numeroMessage]);
+                }
+            }
+
+            System.out.println("Tu veux avoir un ami ? (pour les solitaires : Pendez-vous !");
+            aUnAmi = sc.nextLine();
+            if ("oui".equals(aUnAmi))
+            {
+               System.out.println("Le nom de ton ami :");
+               listeAmi[i_ami] = sc.nextLine();
+               i_ami++;
+               i_ami = i_ami%10;
+               System.out.println("Veux-tu afficher le nom de ton ami ?");
+               afficherNomAmi = sc.nextLine();
+               if("oui".equals(afficherNomAmi))
+               {
+                   System.out.println("Quel numéro d'ami tu veux ma gueule ?");
+                   numeroAmi = sc.nextInt();
+                   sc.nextLine();
+                   System.out.println("Le nom de ton ami est : " + listeAmi[numeroAmi]);
+               }
+            }
+
+            System.out.println("Encore un autre utilisateur ? [oui/non]");
+            boucle = sc.nextLine();
+        }
+
+
         /*
         String prenom = "Mickael";
         String nom = "Marcelat";
@@ -16,9 +120,11 @@ public class Main
         System.out.println(ville);
         */
 
+        /*
         String boucle = "oui";
 
-        while(boucle.equals("oui")) {
+        while(boucle.equals("oui"))
+        {
 
             Scanner entrer = new Scanner(System.in);
 
@@ -42,5 +148,6 @@ public class Main
             boucle = entrer.nextLine();
 
         }
+        */
     }
 }
