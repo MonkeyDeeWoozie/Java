@@ -5,12 +5,35 @@ public class Main
 
     public static void main(String[] args)
     {
+        Scanner sc = new Scanner(System.in);
+        Menu myMenu = new Menu();
+
+        User myUser = new User();
+        myUser.modifyInfo();
+
+        myMenu.showMenu();
+
+        int answer = sc.nextInt();
+        sc.nextLine();
+
+        do
+        {
+            switch(answer)
+            {
+                case 1 : myUser.modifyInfo();
+                case 2 : myUser.showInfo();
+                case 3 : myUser.writeMsg();
+                case 4 : myUser.showAllMsg();
+                case 5 : myUser.addFriend();
+                case 6 : myUser.showFriend();
+                case 7 : //exit
+            }
+        } while(true);
+
+
+
         String boucle = "oui";
 
-        String prenom;
-        String nom;
-        int age;
-        String ville;
         String afficherProfil;
         String modifierProfil;
         String redigerMessage;
@@ -32,15 +55,7 @@ public class Main
         {
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Ton prénom :");
-            prenom = sc.nextLine();
-            System.out.println("Ton nom :");
-            nom = sc.nextLine();
-            System.out.println("Ton age :");
-            age = sc.nextInt();
-            sc.nextLine();
-            System.out.println("Ta ville :");
-            ville = sc.nextLine();
+
 
             System.out.println("Tu veux afficher ton profil ?");
             afficherProfil = sc.nextLine();
@@ -49,6 +64,7 @@ public class Main
                 System.out.println("Bonjour, " + prenom + " " + nom + " tu as " + age + " ans et tu habites à " + ville + " !");
             }
 
+            /*
             System.out.println("Tu veux modifier ton profil ?");
             modifierProfil = sc.nextLine();
             if ("oui".equals(modifierProfil))
@@ -64,6 +80,7 @@ public class Main
                 ville = sc.nextLine();
                 System.out.println("Bonjour, " + prenom + " " + nom + " tu as " + age + " ans et tu habites à " + ville + " !");
             }
+*/
 
             System.out.println("Tu veux écrire un message ?");
             redigerMessage = sc.nextLine();
