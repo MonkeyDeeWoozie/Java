@@ -83,7 +83,8 @@ public class User
 
     public void writeMsg()
     {
-
+        System.out.println("Votre message : uhdqhcdsqhcdhchldhfcdsqhfcudhfcoi");
+        // messagePerso = sc.nextLine();
     }
 
     public void showAllMsg()
@@ -93,7 +94,11 @@ public class User
 
     public void showInfo()
     {
-
+        System.out.println("Vos information de profil : \n" +
+                            "Votre prénom : " + prenomUser + "\n" +
+                            "Votre nom : " + nomUser + "\n" +
+                            "Votre age : " + ageUser + "\n" +
+                            "Votre ville : " + villeUser + "\n");
     }
 
     public void addFriend()
