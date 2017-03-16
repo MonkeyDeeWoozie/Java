@@ -10,6 +10,11 @@ public class User
     String nomUser;
     int ageUser;
     String villeUser;
+    String messageTape;
+    String[] messageTable = new String[10];
+    int i_msg = 0;
+    String[] listeAmi = new String[10];
+    int i_ami = 0;
 
 
     public User()
@@ -71,43 +76,64 @@ public class User
 
     public void modifyInfo() {
         System.out.println("Ton prénom :");
-        prenomUser = sc.nextLine();
+        this.prenomUser = sc.nextLine();
         System.out.println("Ton nom :");
-        nomUser = sc.nextLine();
+        this.nomUser = sc.nextLine();
         System.out.println("Ton age :");
-        ageUser = sc.nextInt();
+        this.ageUser = sc.nextInt();
         sc.nextLine();
         System.out.println("Ta ville :");
-        villeUser = sc.nextLine();
+        this.villeUser = sc.nextLine();
     }
 
     public void writeMsg()
     {
-        System.out.println("Votre message : uhdqhcdsqhcdhchldhfcdsqhfcudhfcoi");
-        // messagePerso = sc.nextLine();
+        System.out.println("Votre message : ");
+        this.messageTape = sc.nextLine();
+
+        messageTable[this.i_msg] = this.messageTape;
+        this.i_msg++;
+        this.i_msg = this.i_msg%10;
     }
 
     public void showAllMsg()
     {
-
+        System.out.println("Liste des messages : ");
+        for(int j = 0; j < messageTable.length; j++)
+        {
+            if(messageTable[j] != null)
+            {
+                System.out.println(j+1 + " : " + messageTable[j]);
+            }
+        }
     }
 
     public void showInfo()
     {
         System.out.println("Vos information de profil : \n" +
-                            "Votre prénom : " + prenomUser + "\n" +
-                            "Votre nom : " + nomUser + "\n" +
-                            "Votre age : " + ageUser + "\n" +
-                            "Votre ville : " + villeUser + "\n");
+                            "Votre prénom : " + this.prenomUser + "\n" +
+                            "Votre nom : " + this.nomUser + "\n" +
+                            "Votre age : " + this.ageUser + "\n" +
+                            "Votre ville : " + this.villeUser + "\n");
     }
 
     public void addFriend()
     {
-
+        System.out.println("Indiquez le prénom et le nom de votre ami : ");
+        listeAmi[this.i_ami] = sc.nextLine();
+        this.i_ami++;
+        this.i_ami = this.i_ami%10;
     }
 
     public void showFriend()
     {
-
+        System.out.println("La liste de vos amis : ");
+        for(int f = 0; f < listeAmi.length; f++)
+        {
+            if(listeAmi[f] != null)
+            {
+                System.out.println(f+1 + " : " + listeAmi[f]);
+            }
+        }
     }
 }
