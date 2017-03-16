@@ -4,18 +4,28 @@ public class Main
 {
     public static void main(String[] args)
     {
+        // Instancié pour récuperer ce que l'utilisateur va taper sur son clavier
         Scanner sc = new Scanner(System.in);
+        // Instancier la classe Menu
         Menu myMenu = new Menu();
+        // Instancie la classe User
         User myUser = new User();
+        // Appel de la methode modifyInfo
         myUser.modifyInfo();
+        // Déclaration de variable qui va etre utile dans ma boucle do while
         boolean boucle = true;
+        // boucle
         do
         {
+            // Appel de la methode showMenu de la classe Menu
             myMenu.showMenu();
+            // Choix de la réponse pour le menu
             int answer = sc.nextInt();
             sc.nextLine();
+            // Switch pour le choix du menu
             switch(answer)
             {
+                // cas avec appel de methode
                 case 1 : myUser.modifyInfo();
                     break;
                 case 2 : myUser.showInfo();
@@ -30,6 +40,7 @@ public class Main
                     break;
                 case 7 : boucle = false;
                     break;
+                // choix par defaut
                 default : System.out.println("Choix non disponible");
             }
         } while(boucle);

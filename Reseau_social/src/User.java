@@ -5,6 +5,7 @@ import java.util.Scanner;
  */
 public class User
 {
+    // Déclaration des attributs de la classe User
     Scanner sc = new Scanner(System.in);
     String prenomUser;
     String nomUser;
@@ -16,7 +17,7 @@ public class User
     String[] listeAmi = new String[10];
     int i_ami = 0;
 
-
+    // Contructeur sans parametres
     public User()
     {
         System.out.println("Création d'un utilisateur");
@@ -26,6 +27,7 @@ public class User
         villeUser = "Inconnu";
     }
 
+    // Contructeur avec 2 parametres
     public User(String pPrenom, String pNom)
     {
         System.out.println("Création d'un utilisateur avec 2 paramètres");
@@ -33,6 +35,7 @@ public class User
         nomUser = pNom;
     }
 
+    // Contructeur avec 4 parametres
     public User(String pPrenom, String pNom, int pAge, String pVille)
     {
         System.out.println("Création d'un utilisateur avec plusieurs paramètres");
@@ -42,6 +45,7 @@ public class User
         villeUser = pVille;
     }
 
+    // Getter et Setter pour les attributs
     public String getPrenomUser() {
         return prenomUser;
     }
@@ -73,6 +77,8 @@ public class User
     public void setVilleUser(String villeUser) {
         this.villeUser = villeUser;
     }
+
+    // Liste des methodes utilisées
 
     public void modifyInfo() {
         System.out.println("Ton prénom :");

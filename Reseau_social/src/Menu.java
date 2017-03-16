@@ -3,11 +3,13 @@
  */
 public class Menu
 {
+    // Constructeur vide
     public Menu()
     {
 
     }
 
+    // Methode pour montrer le menu avec les choix disponobles
     public void showMenu()
     {
         System.out.println("Que voulez-vous faire ? \n" +
