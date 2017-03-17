@@ -13,7 +13,27 @@ public class Main
         // Appel de la methode modifyInfo
         myUser.modifyInfo();
 
-        myMenu.showChoice();
+        boolean bouclette = true;
+
+        do
+        {
+            System.out.println();
+            myMenu.showChoice();
+            int reppe = sc.nextInt();
+            sc.nextLine();
+            switch(reppe)
+            {
+                // cas avec appel de methode
+                case 1 : myMenu.showMenu( 1);
+                    break;
+                case 2 : myMenu.showMenu(2);
+                    break;
+                case 3 : bouclette = false;
+                    break;
+                // choix par defaut
+                default : System.out.println("Choix non disponible");
+            }
+        } while(bouclette);
 
         // Déclaration de variable qui va etre utile dans ma boucle do while
         boolean boucle = true;
@@ -22,7 +42,9 @@ public class Main
         {
             System.out.println();
             // Appel de la methode showMenu de la classe Menu
+
             myMenu.showMenu();
+
             // Choix de la réponse pour le menu
             int answer = sc.nextInt();
             sc.nextLine();
