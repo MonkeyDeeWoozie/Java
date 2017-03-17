@@ -17,6 +17,7 @@ public class Main
         // boucle
         do
         {
+            System.out.println();
             // Appel de la methode showMenu de la classe Menu
             myMenu.showMenu();
             // Choix de la réponse pour le menu

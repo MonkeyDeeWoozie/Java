@@ -7,15 +7,15 @@ public class User
 {
     // Déclaration des attributs de la classe User
     Scanner sc = new Scanner(System.in);
-    String prenomUser;
-    String nomUser;
-    int ageUser;
-    String villeUser;
-    String messageTape;
-    String[] messageTable = new String[10];
-    int i_msg = 0;
-    String[] listeAmi = new String[10];
-    int i_ami = 0;
+    private String prenomUser;
+    private String nomUser;
+    private int ageUser;
+    private String villeUser;
+    private String messageTape;
+    private String[] messageTable = new String[10];
+    private int i_msg = 0;
+    private String[] listeAmi = new String[10];
+    private int i_ami = 0;
 
     // Contructeur sans parametres
     public User()
