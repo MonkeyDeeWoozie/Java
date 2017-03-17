@@ -12,6 +12,9 @@ public class Main
         User myUser = new User();
         // Appel de la methode modifyInfo
         myUser.modifyInfo();
+
+        myMenu.showChoice();
+
         // Déclaration de variable qui va etre utile dans ma boucle do while
         boolean boucle = true;
         // boucle
